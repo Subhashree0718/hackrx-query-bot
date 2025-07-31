@@ -2,5 +2,7 @@ fastapi
 uvicorn
 google-generativeai
 python-dotenv
-sentence-transformers
+sentence-transformers==2.2.2
+transformers==4.30.2
+torch==2.1.0
 pdfplumber

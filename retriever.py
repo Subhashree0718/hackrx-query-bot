@@ -1,10 +1,10 @@
 import os
 import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 from utils import load_documents
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer("all-MiniLM-L6-v2")  # Very small and fast
 docs = load_documents()
 sentences = [line.strip() for doc in docs for line in doc.split(". ") if line.strip()]
 embeddings = model.encode(sentences)
